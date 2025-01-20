@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convertisseur Taille</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Convertisseur Taille</h1>
+
+      <div class="conversion-box">
+        <div class="form-section">
+          <label for="tailleCm">Taille en centimètres :</label>
+          <input
+            type="number"
+            id="tailleCm"
+            placeholder="Entrez votre taille en cm"
+            onkeydown="detecterEntree(event)"
+          />
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="form-section">
+          <label for="taillePieds">Taille en pieds et pouces :</label>
+          <input
+            type="text"
+            id="taillePieds"
+            placeholder="Entrez votre taille en pieds et pouces (ex: 6'9)"
+            onkeydown="detecterEntree(event)"
+          />
+        </div>
+
+        <button onclick="convertirTaille()">Calculer</button>
+      </div>
+
+      <div class="result-section">
+        <h2>Résultat :</h2>
+        <p id="resultat">Veuillez entrer une valeur.</p>
+      </div>
+      <a href="https://www.wetall.fr/" target="_blank">
+        <img src="images/Wetall-vectorisé-wetall.jpg" alt="logo" />
+      </a>
+      <button id="copy-btn">Intégrez le convertisseur dans votre code</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
