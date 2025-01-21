@@ -82,15 +82,17 @@ function detecterEntree(event) {
 document.getElementById("tailleCm").addEventListener("input", () => {});
 document.getElementById("taillePieds").addEventListener("input", () => {});
 // Code iframe à copier
-const iframeCode = `<iframe src="https://rahimmabika.github.io/TaillesChaussures/ title="Convertisseur"></iframe>`;
+const iframeCode = `<iframe src="https://rahimmabika.github.io/convertisseur_tailles/" title="Convertisseur"></iframe>`;
 
-
-document.getElementById('copy-btn').addEventListener('click', function () {
-  navigator.clipboard.writeText(iframeCode)
+document.getElementById("copy-btn").addEventListener("click", function () {
+  navigator.clipboard
+    .writeText(iframeCode)
     .then(() => {
-      alert('Le code iframe a été copié dans le presse-papier !');
+      alert("Le code iframe a été copié dans le presse-papier !");
     })
-    .catch(() => {
-      alert('Erreur lors de la copie du code.');
+    .catch((err) => {
+      console.error("Erreur lors de la copie :", err);
+      alert("Erreur lors de la copie du code.");
     });
 });
+
