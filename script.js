@@ -87,13 +87,25 @@ document.getElementById("taillePieds").addEventListener("input", convertirTaille
 const iframeCode = `<iframe src="https://rahimmabika.github.io/convertisseur_tailles/" title="Convertisseur"></iframe>`;
 
 document.getElementById("copy-btn").addEventListener("click", function () {
+  // Tenter la méthode clipboard
   navigator.clipboard
     .writeText(iframeCode)
     .then(() => {
       alert("Le code iframe a été copié dans le presse-papier !");
     })
-    .catch((err) => {
-      console.error("Erreur lors de la copie :", err);
-      alert("Erreur lors de la copie du code.");
+    .catch(() => {
+      // Si la méthode échoue, utiliser un champ texte temporaire
+      const tempInput = document.createElement("textarea");
+      tempInput.value = iframeCode;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand("copy"); // Méthode alternative
+        alert("Le code iframe a été copié dans le presse-papier !");
+      } catch (err) {
+        console.error("Erreur lors de la méthode de secours :", err);
+        alert("Impossible de copier le code iframe.");
+      }
+      document.body.removeChild(tempInput); // Nettoyer le DOM
     });
 });
