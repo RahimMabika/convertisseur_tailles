@@ -1,13 +1,13 @@
 // Conversion cm en pieds
 function converterCMenPied(cm) {
   const piedsParCm = 1 / 30.48;
-  return (cm * piedsParCm).toFixed(2);
+  return parseFloat((cm * piedsParCm).toFixed(2)); 
 }
 
 // Conversion pieds en cm
 function convertirPiedEnCm(piedsDecimal) {
   const cmParPied = 30.48;
-  return (piedsDecimal * cmParPied).toFixed(2);
+  return parseFloat((piedsDecimal * cmParPied).toFixed(2)); 
 }
 
 // Fonction pour convertir l'entrée en format pied'pouces (comme "6'9")
@@ -27,14 +27,15 @@ function convertirEnFormatPiedsPouces(input) {
 // Fonction pour convertir les pieds/pouces en cm
 function convertirPiedsPoucesEnCm(input) {
   const { pieds, pouces } = convertirEnFormatPiedsPouces(input);
-  return pieds * 30.48 + pouces * 2.54;
+  const resultat = pieds * 30.48 + pouces * 2.54;
+  return parseFloat(resultat.toFixed(2)); // Limiter à deux décimales
 }
 
 // Conversion décimal en pieds et pouces
 function convertirDecimalEnPiedsPouces(piedsDecimal) {
   const pieds = Math.floor(piedsDecimal);
   const poucesDecimal = (piedsDecimal - pieds) * 12;
-  const pouces = Math.round(poucesDecimal);
+  const pouces = Math.round(poucesDecimal); // Arrondi des pouces
   return `${pieds}'${pouces}"`;
 }
 
@@ -79,10 +80,11 @@ function detecterEntree(event) {
 }
 
 // Gestion des champs
-document.getElementById("tailleCm").addEventListener("input", () => {});
-document.getElementById("taillePieds").addEventListener("input", () => {});
+document.getElementById("tailleCm").addEventListener("input", convertirTaille);
+document.getElementById("taillePieds").addEventListener("input", convertirTaille);
+
 // Code iframe à copier
-const iframeCode = `<iframe src="https://rahimmabika.github.io/convertisseur_tailles/" title="Convertisseur"></iframe>`;
+const iframeCode = `<iframe src="https://rahimmabika.github.io/convertisseur_tailles/Z" title="Convertisseur"></iframe>`;
 
 document.getElementById("copy-btn").addEventListener("click", function () {
   navigator.clipboard
@@ -95,4 +97,3 @@ document.getElementById("copy-btn").addEventListener("click", function () {
       alert("Erreur lors de la copie du code.");
     });
 });
-
