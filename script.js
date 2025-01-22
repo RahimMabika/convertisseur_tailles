@@ -84,7 +84,7 @@ document.getElementById("tailleCm").addEventListener("input", convertirTaille);
 document.getElementById("taillePieds").addEventListener("input", convertirTaille);
 
 // Code iframe à copier
-const iframeCode = `<iframe src="https://rahimmabika.github.io/convertisseur_tailles/Z" title="Convertisseur"></iframe>`;
+const iframeCode = `<iframe src="https://rahimmabika.github.io/convertisseur_tailles/" title="Convertisseur"></iframe>`;
 
 document.getElementById("copy-btn").addEventListener("click", function () {
   navigator.clipboard
