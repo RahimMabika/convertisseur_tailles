@@ -28,14 +28,14 @@ function convertirEnFormatPiedsPouces(input) {
 function convertirPiedsPoucesEnCm(input) {
   const { pieds, pouces } = convertirEnFormatPiedsPouces(input);
   const resultat = pieds * 30.48 + pouces * 2.54;
-  return parseFloat(resultat.toFixed(2)); // Limiter à deux décimales
+  return parseFloat(resultat.toFixed(2)); 
 }
 
 // Conversion décimal en pieds et pouces
 function convertirDecimalEnPiedsPouces(piedsDecimal) {
   const pieds = Math.floor(piedsDecimal);
   const poucesDecimal = (piedsDecimal - pieds) * 12;
-  const pouces = Math.round(poucesDecimal); // Arrondi des pouces
+  const pouces = Math.round(poucesDecimal); 
   return `${pieds}'${pouces}"`;
 }
 
