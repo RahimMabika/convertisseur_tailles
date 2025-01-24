@@ -1,181 +1,213 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convertisseur Taille</title>
-  </head>
-  <body>
     <style>
-      body {
-  font-family: Arial, sans-serif;
-  background-color: #fff;
-  margin: 0;
-  padding: 20px;
-  text-align: center;
-  color: #00285b;
-}
-iframe {
-  border: 2px solid #000;
-  margin: 20px;
-}
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: #fff;
-  border: 1px solid #d5ba45;
-  border-radius: 8px;
-  box-shadow: #d5ba45;
-  padding: 20px;
-}
-.spacer {
-  flex-basis: 100%;
-  height: 10px;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: #00285b;
+        }
 
-img {
-  width: 30px;
-  margin-top: 20px;
-  margin-right: 600px;
-}
-h1 {
-  font-size: 24px;
-  color: #00285b;
-  margin-bottom: 20px;
-}
+        iframe {
+            border: 2px solid #000;
+            margin: 20px;
+        }
 
-.conversion-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 20px;
-}
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #d5ba45;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px #d5ba45;
+            padding: 20px;
+        }
 
-.form-section {
-  flex: 1 1 45%;
-  text-align: left;
-  color: #00285b;
-}
+        .spacer {
+            flex-basis: 100%;
+            height: 10px;
+        }
 
-label {
-  display: block;
-  font-size: 14px;
-  color: #00285b;
-  margin-bottom: 5px;
-}
+        img {
+            width: 30px;
+            margin-top: 20px;
+            margin-right: 600px;
+        }
 
-input,
-select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
-  font-size: 14px;
-  color: #00285b;
-}
+        h1 {
+            font-size: 24px;
+            color: #00285b;
+            margin-bottom: 20px;
+        }
 
-.default-button {
-  padding: 10px 20px;
-  background-color: #eccf5b;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 15px;
-  transition: 1s;
-}
+        .conversion-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
 
-.default-button:hover {
-  background-color: #00285b;
-  transition: 1s;
-}
+        .form-section {
+            flex: 1 1 45%;
+            text-align: left;
+            color: #00285b;
+        }
 
-.styled-button {
-  color: #00285b;
-  border: none;
-  cursor: pointer;
-  font-size: 12px;
-  transition: all 0.3s ease;
-  display: block;
-  margin-left: auto;
-  margin-top: -20px;
-  text-decoration: underline;
-  outline: none;
-  box-shadow: none;
-  background: none;
-}
-a {
-  text-decoration: underline;
-  outline: none;
-  box-shadow: none;
-}
+        label {
+            display: block;
+            font-size: 14px;
+            color: #00285b;
+            margin-bottom: 5px;
+        }
 
-.result-section {
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #dee2e6;
-  color: #00285b;
-}
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #00285b;
+        }
 
-.result-section h2 {
-  font-size: 18px;
-  color: #00285b;
-  margin-bottom: 10px;
-}
+        .default-button {
+            padding: 10px 20px;
+            background-color: #eccf5b;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 1s;
+        }
 
-.result-section p {
-  font-size: 16px;
-  color: #00285b;
-  margin: 0;
-}
-input[type="text"] {
-  width: 70%;
-}
-input[type="number"] {
-  width: 59%;
-}
+        .default-button:hover {
+            background-color: #00285b;
+            transition: 1s;
+        }
+
+        .styled-button {
+            color: #00285b;
+            border: none;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+            display: block;
+            margin-left: auto;
+            margin-top: -20px;
+            text-decoration: underline;
+            outline: none;
+            box-shadow: none;
+            background: none;
+        }
+
+        a {
+            text-decoration: underline;
+            outline: none;
+            box-shadow: none;
+        }
+
+        .result-section {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            color: #00285b;
+        }
+
+        .result-section h2 {
+            font-size: 18px;
+            color: #00285b;
+            margin-bottom: 10px;
+        }
+
+        .result-section p {
+            font-size: 16px;
+            color: #00285b;
+            margin: 0;
+        }
+
+        input[type="text"] {
+            width: 70%;
+        }
+
+        input[type="number"] {
+            width: 59%;
+        }
     </style>
+</head>
+<body>
     <div class="container">
-      <h1>Convertisseur Taille</h1>
-      <div class="conversion-box">
-        <div class="form-section">
-          <label for="tailleCm">Taille en centimètres :</label>
-          <input
-            type="number"
-            id="tailleCm"
-            placeholder="Entrez votre taille en cm"
-            oninput="convertirTaille()"
-          />
+        <h1>Convertisseur Taille</h1>
+        <div class="conversion-box">
+            <div class="form-section">
+                <label for="tailleCm">Taille en centimètres :</label>
+                <input
+                    type="number"
+                    id="tailleCm"
+                    placeholder="Entrez votre taille en cm"
+                    oninput="convertirTaille()"
+                />
+            </div>
+            <div class="spacer"></div>
+            <div class="form-section">
+                <label for="taillePieds">Taille en pieds et pouces :</label>
+                <input
+                    type="text"
+                    id="taillePieds"
+                    placeholder="Entrez votre taille en pieds et pouces (ex: 6'9)"
+                    oninput="convertirTaille()"
+                />
+            </div>
+            <button onclick="convertirTaille()" class="default-button">
+                Calculer
+            </button>
         </div>
-        <div class="spacer"></div>
-        <div class="form-section">
-          <label for="taillePieds">Taille en pieds et pouces :</label>
-          <input
-            type="text"
-            id="taillePieds"
-            placeholder="Entrez votre taille en pieds et pouces (ex: 6'9)"
-            oninput="convertirTaille()"
-          />
+        <div class="result-section">
+            <h2>Résultat :</h2>
+            <p id="resultat">Veuillez entrer une valeur.</p>
         </div>
-        <button onclick="convertirTaille()" class="default-button">
-          Calculer
+        <a href="https://www.wetall.fr/" target="_blank">
+            <img src="images/Wetall-vectorise-wetall.jpg" alt="logo" />
+        </a>
+        <button id="copy-btn" class="styled-button">
+            Intégrez ce convertisseur à votre site
         </button>
-      </div>
-      <div class="result-section">
-        <h2>Résultat :</h2>
-        <p id="resultat">Veuillez entrer une valeur.</p>
-      </div>
-      <a href="https://www.wetall.fr/" target="_blank">
-        <img src="images/Wetall-vectorisé-wetall.jpg" alt="logo" />
-      </a>
-      <button id="copy-btn" class="styled-button">
-        Intégrez ce convertisseur à votre site
-      </button>
     </div>    
-    <script>
-      const _0x2294f9=_0x31e9;(function(_0x3bd422,_0x153ada){const _0x5cc254=_0x31e9,_0x4a8ad8=_0x3bd422();while(!![]){try{const _0x454c74=parseInt(_0x5cc254(0x218))/0x1+parseInt(_0x5cc254(0x208))/0x2*(parseInt(_0x5cc254(0x1f0))/0x3)+-parseInt(_0x5cc254(0x1f5))/0x4*(parseInt(_0x5cc254(0x20f))/0x5)+parseInt(_0x5cc254(0x203))/0x6*(parseInt(_0x5cc254(0x204))/0x7)+parseInt(_0x5cc254(0x20a))/0x8*(-parseInt(_0x5cc254(0x1f9))/0x9)+-parseInt(_0x5cc254(0x213))/0xa+-parseInt(_0x5cc254(0x1ef))/0xb*(parseInt(_0x5cc254(0x20e))/0xc);if(_0x454c74===_0x153ada)break;else _0x4a8ad8['push'](_0x4a8ad8['shift']());}catch(_0x3e070a){_0x4a8ad8['push'](_0x4a8ad8['shift']());}}}(_0x1057,0x29106));function converterCMenPied(_0x39ff50){const _0x24fbce=_0x31e9,_0x254d27=0x1/30.48;return parseFloat((_0x39ff50*_0x254d27)[_0x24fbce(0x209)](0x2));}function convertirPiedEnCm(_0x296538){const _0x1d41ee=30.48;return parseFloat((_0x296538*_0x1d41ee)['toFixed'](0x2));}function convertirEnFormatPiedsPouces(_0x3842f9){const _0x515881=_0x31e9;_0x3842f9=_0x3842f9[_0x515881(0x1fe)](/[\.,\s]+/g,'\x27');const _0x42cc6f=_0x3842f9[_0x515881(0x1fc)]('\x27'),_0x5e62e2=parseInt(_0x42cc6f[0x0],0xa)||0x0,_0xe4ee73=parseInt(_0x42cc6f[0x1],0xa)||0x0;return{'pieds':_0x5e62e2,'pouces':_0xe4ee73};}function convertirPiedsPoucesEnCm(_0x62f860){const _0x538b00=_0x31e9,{pieds:_0x3f52f1,pouces:_0x504db9}=convertirEnFormatPiedsPouces(_0x62f860),_0x1262c6=_0x3f52f1*30.48+_0x504db9*2.54;return parseFloat(_0x1262c6[_0x538b00(0x209)](0x2));}function convertirDecimalEnPiedsPouces(_0x1fe9e4){const _0x101472=_0x31e9,_0x5eb9de=Math['floor'](_0x1fe9e4),_0x85144f=(_0x1fe9e4-_0x5eb9de)*0xc,_0x9288cc=Math[_0x101472(0x1fd)](_0x85144f);return _0x5eb9de+'\x27'+_0x9288cc+'\x22';}function _0x31e9(_0x308980,_0x24703c){const _0x10579e=_0x1057();return _0x31e9=function(_0x31e962,_0x5e46f3){_0x31e962=_0x31e962-0x1ef;let _0x3043f7=_0x10579e[_0x31e962];return _0x3043f7;},_0x31e9(_0x308980,_0x24703c);}function convertirTaille(){const _0x56e50f=_0x31e9,_0x206940=document['getElementById'](_0x56e50f(0x219)),_0x4c94a2=document[_0x56e50f(0x211)]('taillePieds'),_0xc3dc60=_0x206940[_0x56e50f(0x20b)][_0x56e50f(0x1f1)](),_0x37581b=_0x4c94a2['value']['trim'](),_0x2e5f2b=document['getElementById'](_0x56e50f(0x215));if(document[_0x56e50f(0x1fb)]['id']===_0x56e50f(0x219)&&_0xc3dc60&&!isNaN(_0xc3dc60)){const _0x1817c9=parseFloat(converterCMenPied(_0xc3dc60)),_0x3fe3bb=convertirDecimalEnPiedsPouces(_0x1817c9);_0x4c94a2[_0x56e50f(0x20b)]='',_0x2e5f2b[_0x56e50f(0x20c)]=_0xc3dc60+_0x56e50f(0x1ff)+_0x3fe3bb+_0x56e50f(0x200);}else{if(document[_0x56e50f(0x1fb)]['id']==='taillePieds'&&_0x37581b){const _0x2cf322=convertirPiedsPoucesEnCm(_0x37581b);_0x206940['value']='',_0x2e5f2b['textContent']=_0x37581b+_0x56e50f(0x212)+_0x2cf322+_0x56e50f(0x1f2);}else{if(_0xc3dc60&&!isNaN(_0xc3dc60)){const _0x5db468=parseFloat(converterCMenPied(_0xc3dc60)),_0x985598=convertirDecimalEnPiedsPouces(_0x5db468);_0x2e5f2b[_0x56e50f(0x20c)]=_0xc3dc60+_0x56e50f(0x1ff)+_0x985598+'\x20ft';}else{if(_0x37581b){const _0x291938=convertirPiedsPoucesEnCm(_0x37581b);_0x2e5f2b[_0x56e50f(0x20c)]=_0x37581b+_0x56e50f(0x212)+_0x291938+_0x56e50f(0x1f2);}else _0x2e5f2b['textContent']=_0x56e50f(0x201);}}}}function detecterEntree(_0xf544b0){const _0x93cf07=_0x31e9;_0xf544b0[_0x93cf07(0x20d)]===_0x93cf07(0x1fa)&&convertirTaille();}document['getElementById'](_0x2294f9(0x219))[_0x2294f9(0x214)](_0x2294f9(0x217),convertirTaille),document[_0x2294f9(0x211)](_0x2294f9(0x216))['addEventListener'](_0x2294f9(0x217),convertirTaille);const iframeCode='<iframe\x20src=\x22https://rahimmabika.github.io/convertisseur_tailles/\x22\x20title=\x22Convertisseur\x22></iframe\x20allow=\x22clipboard-write\x22>';function _0x1057(){const _0x1a47d4=['activeElement','split','round','replace','\x20cm\x20=\x20','\x20ft','Veuillez\x20entrer\x20une\x20valeur.','then','3666FQvPkL','2751xgsiVc','message','writeText','error','2toLVDx','toFixed','1984cNsLtO','value','textContent','key','540624UlVRey','254750osZJig','copy-btn','getElementById','\x20ft\x20=\x20','1373920DeARFi','addEventListener','resultat','taillePieds','input','169192iYqGWx','tailleCm','22lvhUgE','139515WlqQvK','trim','\x20cm','clipboard','catch','4BrfSMk','Erreur\x20lors\x20de\x20la\x20copie\x20:','Le\x20code\x20iframe\x20a\x20été\x20copié\x20dans\x20le\x20presse-papier\x20!','click','333BopuzS','Enter'];_0x1057=function(){return _0x1a47d4;};return _0x1057();}document[_0x2294f9(0x211)](_0x2294f9(0x210))[_0x2294f9(0x214)](_0x2294f9(0x1f8),function(){const _0x570c3f=_0x2294f9;navigator[_0x570c3f(0x1f3)][_0x570c3f(0x206)](iframeCode)[_0x570c3f(0x202)](()=>{const _0x442706=_0x570c3f;alert(_0x442706(0x1f7));})[_0x570c3f(0x1f4)](_0x287cee=>{const _0x26efaa=_0x570c3f;console[_0x26efaa(0x207)](_0x26efaa(0x1f6),_0x287cee),alert('Erreur\x20lors\x20de\x20la\x20copie\x20du\x20code\x20:\x20'+_0x287cee[_0x26efaa(0x205)]);});});
+
+    <script defer>
+        const _0x2294f9 = _0x31e9;
+        (function (_0x3bd422, _0x153ada) {
+            const _0x5cc254 = _0x31e9,
+                _0x4a8ad8 = _0x3bd422();
+            while (!![]) {
+                try {
+                    const _0x454c74 =
+                        parseInt(_0x5cc254(0x218)) / 0x1 +
+                        parseInt(_0x5cc254(0x208)) / 0x2 *
+                        (parseInt(_0x5cc254(0x1f0)) / 0x3) +
+                        -parseInt(_0x5cc254(0x1f5)) / 0x4 *
+                        (parseInt(_0x5cc254(0x20f)) / 0x5) +
+                        parseInt(_0x5cc254(0x203)) / 0x6 *
+                        (parseInt(_0x5cc254(0x204)) / 0x7) +
+                        parseInt(_0x5cc254(0x20a)) / 0x8 *
+                        (-parseInt(_0x5cc254(0x1f9)) / 0x9) +
+                        -parseInt(_0x5cc254(0x213)) / 0xa +
+                        -parseInt(_0x5cc254(0x1ef)) / 0xb *
+                        (parseInt(_0x5cc254(0x20e)) / 0xc);
+                    if (_0x454c74 === _0x153ada) break;
+                    else _0x4a8ad8['push'](_0x4a8ad8['shift']());
+                } catch (_0x3e070a) {
+                    _0x4a8ad8['push'](_0x4a8ad8['shift']());
+                }
+            }
+        }(_0x1057, 0x29106));
     </script>
-  </body>
+</body>
 </html>
